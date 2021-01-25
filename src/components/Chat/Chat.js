@@ -25,7 +25,8 @@ function Chat() {
   const [messageValue, setMessageValue] = useState("");
 
   React.useEffect(() => {
-    if (roomsState.messages.length > 0 && !roomsState.joinLoading) messagesRef.current.scrollTo(0, 99999);
+    if (roomsState.messages.length > 0 && !roomsState.joinLoading)
+      messagesRef.current.scrollTo(0, 99999);
   }, [roomsState.messages]);
 
   React.useEffect(() => {
@@ -34,10 +35,9 @@ function Chat() {
 
   useEffect(() => {
     const roomName = document.location.pathname.slice(7);
+
     if (roomName !== "") {
       dispatch(joinRoom(roomName, userName));
-    } else {
-        
     }
   }, []);
 
@@ -64,15 +64,14 @@ function Chat() {
             <form
               onSubmit={(evt) => {
                 evt.preventDefault();
-                
-                history.replace(`/rooms/${roomName}`, roomName )
-                
+
+                history.replace(`/rooms/${roomName}`, roomName);
+
                 roomName.trim() !== "" && api.socket.emit("add room", roomName);
-                
+
                 showInputRoomName(false);
                 dispatch(joinRoom(roomName, userName));
                 setRoomName("");
-                
               }}
             >
               {inputRoomName ? (
@@ -81,11 +80,10 @@ function Chat() {
                     <input
                       onChange={(e) => setRoomName(e.target.value)}
                       placeholder="Input room name"
+                      pattern="^[a-zA-Z0-9]+$"
                     />
 
-                    <button
-                      disabled={roomName === "" && inputRoomName}
-                    >
+                    <button disabled={roomName === "" && inputRoomName}>
                       <i className="fas fa-check"></i>
                     </button>
                   </div>
@@ -150,7 +148,9 @@ function Chat() {
               <>
                 <div className={classes.Chat__Messages__RoomName}>
                   <span>Room: {roomsState.selectedRoom}</span>
-                  <NavLink to={`/rooms/broadcast/${roomsState.selectedRoom}`}><i className="fas fa-video"></i></NavLink>
+                  <NavLink to={`/rooms/broadcast/${roomsState.selectedRoom}`}>
+                    <i className="fas fa-video"></i>
+                  </NavLink>
                 </div>
 
                 <div className={classes.Chat__Messages__MessageList}>

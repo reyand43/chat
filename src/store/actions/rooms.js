@@ -24,7 +24,6 @@ export function joinRoom(roomName, userName) {
       dispatch(setMessages(messages.messages));
     });
     const res = await api.joinRoom(roomName, userName);
-
     if (res.status === "error") dispatch(joinError(res.data));
     else {
       dispatch(joinSuccess(roomName));
@@ -52,7 +51,6 @@ export function changeRoom(roomName, userName, prevRoom) {
       if (res.status === "error") dispatch(joinError(res.data));
       else {
         dispatch(joinSuccess(roomName));
-        
       }
       
     } else dispatch(joinRoom(roomName, userName));
