@@ -1,0 +1,233 @@
+@import "../../containers/vars.scss";
+
+.Chat {
+  width: 1200px;
+  height: calc(100% - 110px);
+  background: $colorLightGrey;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-top: 20px;
+  display: flex;
+  justify-self: center;
+
+  button {
+    cursor: pointer;
+  }
+  &__Rooms {
+    width: 250px;
+    height: 90%;
+    form {
+      margin: 10px;
+      font-size: 16px;
+      font-weight: 700;
+
+      div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+
+        input {
+          border: none;
+          background: $colorLightGrey;
+          outline: none;
+          font-size: 16px;
+          font-weight: 500;
+          &::placeholder {
+            color: $colorAccent;
+          }
+        }
+        button {
+          border: none;
+          outline: none;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          background: $colorLightGrey;
+          width: 20px;
+          &:hover {
+            color: $colorAccent;
+          }
+          i {
+            margin-top: 5px;
+            padding: 0px;
+            font-size: 16px;
+          }
+        }
+      }
+      hr {
+        background: black;
+      }
+    }
+    ul {
+      list-style: none;
+      height: 100%;
+      padding: 0;
+      overflow-y: auto;
+      
+
+      li {
+        border: 2px solid $colorMediumGrey;
+        margin: 10px;
+        border-radius: 10px;
+        
+        display: flex;
+        white-space: nowrap;
+        cursor: pointer;
+        &:hover {
+          border: 2px solid $colorAccent;
+        }
+        a {
+            width: 100%;
+            height: 100%;
+            padding: 20px 15px;
+          text-decoration: none;
+          color: black;
+          box-sizing: border-box;
+
+        }
+       
+      }
+    }
+  }
+  &__Messages {
+    height: 100%;
+    width: calc(1170px - 500px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 15px;
+    &__Plug {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 16px;
+      font-weight: 500;
+      span {
+        text-decoration: underline;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      i {
+        color: $colorAccent;
+        font-size: 150px;
+      }
+    }
+    &__NoMessages{
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $colorAccent;
+      font-size: 26px;
+      font-weight: 700;
+    }
+    &__RoomName {
+      background: $colorMediumGrey;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      box-sizing: border-box;
+      span {
+        font-size: 16px;
+        font-weight: 700;
+      }
+      i {
+        font-size: 22px;
+        color: $colorDarkGrey;
+        cursor: pointer;
+        &:hover {
+          color: $colorAccent;
+        }
+      }
+    }
+    &__MessageList {
+      background: $colorMediumGrey;
+      height: calc(100% - 110px);
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        height: 100%;
+        margin: 0;
+        padding-left: 15px;
+        justify-content: flex-end;
+        li {
+          padding: 0;
+          margin-top: 15px;
+        }
+      }
+    }
+    form {
+      width: 100%;
+      background: $colorMediumGrey;
+      margin-bottom: 3%;
+      padding: 15px 15px;
+      display: flex;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      box-sizing: border-box;
+
+      input {
+        font-size: 16px;
+        width: 100%;
+        background: $colorLightGrey;
+        border: 1px solid $colorDarkGrey;
+        outline: none;
+        border-radius: 5px;
+      }
+      button {
+        margin-left: 10px;
+        background: $colorMediumGrey;
+        border: none;
+        outline: none;
+        font-size: 22px;
+        color: $colorDarkGrey;
+
+        cursor: pointer;
+        &:hover {
+          color: $colorAccent;
+        }
+      }
+    }
+  }
+  &__Users {
+    width: 200px;
+    padding: 15px 20px;
+    height: 90%;
+
+    &__Title {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    ul {
+      list-style: none;
+      padding: 0px;
+      overflow-y: auto;
+      height: 100%;
+      li {
+        padding: 10px 0;
+      }
+    }
+  }
+}
+
+
+.selected{
+    background: $colorAccent;
+    border: 2px solid $colorAccent !important;
+    
+    font-weight: 700;
+    a{
+        color: white !important; 
+    }
+}

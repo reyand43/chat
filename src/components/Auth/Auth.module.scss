@@ -1,0 +1,65 @@
+@import '../../containers/vars.scss';
+
+.Auth{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    &__Title{
+        color: $colorAccent;
+        font-size: 100px;
+        font-weight: 700;
+        margin-bottom: 100px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        input{
+            padding: 20px 15px;
+            width: 500px;
+            font-size: 16px;
+            font-weight: 500;
+            outline: none;
+            border: 2px solid $colorLightGrey;
+            background: $colorLightGrey;
+            border-radius: 18px;
+            margin: 10px 0;
+            &:hover{
+                border: 2px solid $colorMediumGrey;
+                background: $colorMediumGrey;
+            }
+            &:active, &:focus{
+                border: 2px solid $colorAccent;
+            }
+            &::placeholder{
+                color: $colorAccent;
+            }
+        }
+        button{
+            padding: 0 14px;
+            height: 3rem;
+            font-size: 1rem;
+            font-weight: 700;
+            color: white;
+            background: $colorAccent;
+            transition: 300ms;
+            border-radius: 18px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            &:hover{
+                background: $colorAccentDark;
+                transition: 300ms;
+            }
+        }
+    }
+    &__Error{
+        text-align: start;
+        font-size: 20px;
+        font-weight: 700;
+        color: rgb(185, 24, 24);
+        padding-bottom: 20px;
+    }
+
+}

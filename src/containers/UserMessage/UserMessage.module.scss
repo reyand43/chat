@@ -1,0 +1,28 @@
+@import "../vars.scss";
+
+.UserMessage {
+  float: left;
+  background: $colorLightGrey;
+  color: black;
+  border: 2px solid $colorAccent;
+  display: flex;
+  min-width: 10%;
+  max-width: 40%;
+  flex-direction: column;
+
+  margin-right: 15px;
+  padding: 7px 10px;
+  border-radius: 10px;
+  &__UserName {
+    font-weight: 700;
+  }
+  &__TimeStamp {
+    font-size: 400;
+    font-size: 12px;
+    text-align: right;
+  }
+  &__Text {
+    word-break: break-word;
+    margin: 0;
+  }
+}

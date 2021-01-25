@@ -1,0 +1,32 @@
+@import '../vars.scss';
+
+.MyMessage{
+    float: right;
+    background: $colorAccent;
+    color: white;
+    display: flex;
+    min-width: 10%;
+    max-width: 40%;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 15px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    position: relative;
+
+    &__TimeStamp{
+        font-size: 400;
+        font-size: 12px;
+        
+    }
+    &__Text{
+        word-break: break-word;
+        
+    }
+    &__Loader{
+        position: absolute;
+        left: -30px;
+        height: 100%;
+    }
+
+}

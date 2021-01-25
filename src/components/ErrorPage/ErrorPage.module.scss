@@ -1,0 +1,26 @@
+@import '../../containers/vars.scss';
+
+.ErrorPage{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__404{
+        font-weight: 900;
+        font-size: 250px;
+        color: $colorAccent;
+    }
+    &__Text{
+        font-size: 32px;
+        font-weight: 500;
+    }
+    a{
+        text-decoration: underline;
+        color: $colorAccent;
+        font-weight: 600;
+        font-size: 28;
+        cursor: pointer;
+
+    }
+}
